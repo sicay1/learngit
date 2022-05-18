@@ -5,5 +5,9 @@ folder3/file33*.txt
 file4*.txt
 
 #comment 3
-.csv
-.doc
+*.csv
+*.doc
+
+#comment 4
+*.log
+!tony.log

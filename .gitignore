@@ -3,3 +3,7 @@ folder3/file33*.txt
 
 #comment 2
 file4*.txt
+
+#comment 3
+.csv
+.doc

@@ -1,2 +1,0 @@
-file tạo ra sau khi tag1
-thay đổi file này - test deploy theo tag2

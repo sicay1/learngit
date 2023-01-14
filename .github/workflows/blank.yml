@@ -24,10 +24,13 @@ jobs:
     steps:
       - name: Get tag name
         id: get_tag_name
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+        run: echo ::set-output name=VERSION::${{ env.GITHUB_REF_NAME }}
         
-#       - name: echo debug var VERSION
-#         run: echo ${{ steps.get_tag_name.outputs.VERSION }}
+      - name: echo debug var VERSION
+        run: |
+          echo "Tag name from github.ref_name: ${{ github.ref_name }}"
+          echo "Tag name from github.ref_name: $GITHUB_REF_NAME"
+          echo "Tag name from github.ref_name: ${{ env.GITHUB_REF_NAME }}"
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
